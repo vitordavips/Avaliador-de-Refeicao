@@ -1,0 +1,41 @@
+body{
+    text-align: center;
+    background-color: #8a9190;
+}
+
+#otimo{
+    width: 90px;
+    height: 100px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 5px;
+    background-color: #0bac8e;
+}
+
+#bom{
+    width: 90px;
+    height: 100px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 5px;
+    background-color: #0a65b4;
+}
+
+#regular{
+    width: 90px;
+    height: 100px;
+    padding-top: 14px;
+    border-radius: 5px;
+    border: none;
+    background-color: #F23030;
+}
+
+button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in;
+}
+
+h1{
+    font-family: 'Roboto', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

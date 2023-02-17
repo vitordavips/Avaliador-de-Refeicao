@@ -1,0 +1,38 @@
+body{
+    background-color: #8a9190;
+}
+
+body>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+header{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#btn-voltar{
+    width: 53px;
+    height: 20px;
+    background-color: rgba(46, 46, 230, 0.658);
+    border-radius: 7px;
+    border: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in;
+}
+
+button{
+    font-family: 'Roboto';
+}
