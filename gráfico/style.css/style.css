@@ -7,6 +7,8 @@ body>div{
     justify-content: center;
     align-items: center;
     margin-top: 25px;
+    width: 75%;
+    height: 75%;
 }
 
 header{
