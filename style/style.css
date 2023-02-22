@@ -3,6 +3,23 @@ body{
     background-color: #8a9190;
 }
 
+header{
+    display: flex;
+    justify-content: flex-end;
+}
+
+header>button{
+    border-radius: 5px;
+    padding: 6px;
+    border-style: none;
+    background-color: #0a65b4;
+}
+
+a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
 #otimo{
     width: 90px;
     height: 100px;
