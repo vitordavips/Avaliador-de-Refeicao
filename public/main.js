@@ -3,7 +3,8 @@
 const otimo = document.getElementById("otimo");
 const bom = document.getElementById("bom");
 const regular = document.getElementById("regular");
-let numCliques = localStorage.getItem('numCliques') || 0;
+
+let otimoCliques = localStorage.getItem('otimoCliques') || 0;
 let bomCliques = localStorage.getItem('bomCliques') || 0;
 let regularCliques = localStorage.getItem('regularCliques') || 0;
 
@@ -11,8 +12,8 @@ let regularCliques = localStorage.getItem('regularCliques') || 0;
 Se não houver, ele define o valor inicial como '0'.Em seguida, ele adiciona um evento de clique ao botão
 que atualizar o valor de 'numCliques' e o armazena na 'localStorage'*/
 otimo.addEventListener('click', () => {
-    numCliques++;
-    localStorage.setItem('numCliques', numCliques);
+    otimoCliques++;
+    localStorage.setItem('otimoCliques', otimoCliques);
 });
 
 bom.addEventListener('click', () => {
@@ -24,6 +25,8 @@ regular.addEventListener('click', () => {
     regularCliques++;
     localStorage.setItem('regularCliques', regularCliques);
 });
+
+
 
 
 
