@@ -1,37 +1,25 @@
-//const socket = io();
-
 const otimo = document.getElementById("otimo");
 const bom = document.getElementById("bom");
-const regular = document.getElementById("regular");
+const regular = document.getElementById("regular");   
 
-let otimoCliques = localStorage.getItem('otimoCliques') || 0;
-let bomCliques = localStorage.getItem('bomCliques') || 0;
-let regularCliques = localStorage.getItem('regularCliques') || 0;
+const socket =  new WebSocket("ws://localhost:8080");
 
-/* Esse código verifica se já existe um valor armazenado para 'numCliques' na 'localStorage'.
-Se não houver, ele define o valor inicial como '0'.Em seguida, ele adiciona um evento de clique ao botão
-que atualizar o valor de 'numCliques' e o armazena na 'localStorage'*/
-otimo.addEventListener('click', () => {
-    otimoCliques++;
-    localStorage.setItem('otimoCliques', otimoCliques);
-});
+socket.onpen = () =>{
+    console.log("Conexão estabelecida com o servidor webSocket.")
+};
 
-bom.addEventListener('click', () => {
-    bomCliques++;
-    localStorage.setItem('bomCliques', bomCliques);
-});
+socket.onerror = (error) => {
+    console.log(`Erro: ${error}`);
+};
 
-regular.addEventListener('click', () => {
-    regularCliques++;
-    localStorage.setItem('regularCliques', regularCliques);
-});
+otimo.onclick = () => {
+    socket.send("otimo");
+};
 
+bom.onclick = () => {
+    socket.send("bom");
+};
 
-
-
-
-
-/*const urlSearch = new URLSearchParams(window.location.search);
-const click = urlSearch.get("click")
-
-console.log(click)*/
+regular.onclick = () => {
+    socket.send("regular");
+}
